@@ -1,0 +1,475 @@
+EESchema Schematic File Version 2
+LIBS:CRE1
+LIBS:sensorGridPcb-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:75176
+LIBS:stm32
+LIBS:VL53L0X
+LIBS:sensorGridPcb-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L C_Small C14
+U 1 1 5838AE8E
+P 950 1650
+F 0 "C14" H 1042 1696 50  0000 L CNN
+F 1 "100n" H 1042 1605 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 950 1650 50  0001 C CNN
+F 3 "" H 950 1650 50  0000 C CNN
+	1    950  1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C15
+U 1 1 5838AE95
+P 1300 1650
+F 0 "C15" H 1392 1696 50  0000 L CNN
+F 1 "4.7u" H 1392 1605 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1300 1650 50  0001 C CNN
+F 3 "" H 1300 1650 50  0000 C CNN
+	1    1300 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R20
+U 1 1 5838AEA0
+P 3100 1200
+F 0 "R20" H 3170 1246 50  0000 L CNN
+F 1 "10k" H 3170 1155 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 3030 1200 50  0001 C CNN
+F 3 "" H 3100 1200 50  0000 C CNN
+	1    3100 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R21
+U 1 1 5838AEA7
+P 3400 1200
+F 0 "R21" H 3470 1246 50  0000 L CNN
+F 1 "10k" H 3470 1155 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 3330 1200 50  0001 C CNN
+F 3 "" H 3400 1200 50  0000 C CNN
+	1    3400 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR028
+U 1 1 5838AEAE
+P 3250 900
+F 0 "#PWR028" H 3250 750 50  0001 C CNN
+F 1 "+3.3V" H 3265 1073 50  0000 C CNN
+F 2 "" H 3250 900 50  0000 C CNN
+F 3 "" H 3250 900 50  0000 C CNN
+	1    3250 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L VL53L0X U8
+U 1 1 5838AEB4
+P 2350 1900
+F 0 "U8" H 2350 2587 60  0000 C CNN
+F 1 "VL53L0X" H 2350 2481 60  0000 C CNN
+F 2 "VL53L0X:VL53L0X" H 2400 1850 60  0001 C CNN
+F 3 "" H 2400 1850 60  0000 C CNN
+	1    2350 1900
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2950 2100
+Wire Wire Line
+	1750 1600 1600 1600
+Wire Wire Line
+	1600 1600 1600 1500
+Wire Wire Line
+	950  1500 1750 1500
+Wire Wire Line
+	950  1500 950  1550
+Connection ~ 1600 1500
+Wire Wire Line
+	1300 1550 1300 1500
+Connection ~ 1300 1500
+Wire Wire Line
+	1750 1800 950  1800
+Wire Wire Line
+	950  1800 950  1750
+Wire Wire Line
+	1300 1750 1300 1950
+Connection ~ 1300 1800
+Wire Wire Line
+	2950 1600 3650 1600
+Wire Wire Line
+	2950 1500 3650 1500
+Wire Wire Line
+	2950 1800 6100 1800
+Wire Wire Line
+	2950 1900 6000 1900
+Wire Wire Line
+	3250 900  3250 1000
+Wire Wire Line
+	3100 1000 3400 1000
+Wire Wire Line
+	3100 1000 3100 1050
+Wire Wire Line
+	3400 1000 3400 1050
+Connection ~ 3250 1000
+Wire Wire Line
+	3100 1350 3100 1500
+Connection ~ 3100 1500
+Wire Wire Line
+	3400 1350 3400 1600
+Connection ~ 3400 1600
+Wire Wire Line
+	1600 1800 1600 2200
+Wire Wire Line
+	1600 1900 1750 1900
+Connection ~ 1600 1800
+Wire Wire Line
+	1600 2000 1750 2000
+Connection ~ 1600 1900
+Wire Wire Line
+	1600 2100 1750 2100
+Connection ~ 1600 2000
+Wire Wire Line
+	1600 2200 1750 2200
+Connection ~ 1600 2100
+$Comp
+L VSS #PWR029
+U 1 1 5838AEDD
+P 1300 1950
+F 0 "#PWR029" H 1300 1800 50  0001 C CNN
+F 1 "VSS" H 1318 2123 50  0000 C CNN
+F 2 "" H 1300 1950 50  0000 C CNN
+F 3 "" H 1300 1950 50  0000 C CNN
+	1    1300 1950
+	-1   0    0    1   
+$EndComp
+$Comp
+L C_Small C18
+U 1 1 5838B6E0
+P 950 6150
+F 0 "C18" H 1042 6196 50  0000 L CNN
+F 1 "100n" H 1042 6105 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 950 6150 50  0001 C CNN
+F 3 "" H 950 6150 50  0000 C CNN
+	1    950  6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C19
+U 1 1 5838B6E6
+P 1300 6150
+F 0 "C19" H 1392 6196 50  0000 L CNN
+F 1 "4.7u" H 1392 6105 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1300 6150 50  0001 C CNN
+F 3 "" H 1300 6150 50  0000 C CNN
+	1    1300 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R24
+U 1 1 5838B6F0
+P 3100 5700
+F 0 "R24" H 3170 5746 50  0000 L CNN
+F 1 "10k" H 3170 5655 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 3030 5700 50  0001 C CNN
+F 3 "" H 3100 5700 50  0000 C CNN
+	1    3100 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R25
+U 1 1 5838B6F6
+P 3400 5700
+F 0 "R25" H 3470 5746 50  0000 L CNN
+F 1 "10k" H 3470 5655 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 3330 5700 50  0001 C CNN
+F 3 "" H 3400 5700 50  0000 C CNN
+	1    3400 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR030
+U 1 1 5838B6FC
+P 3250 5400
+F 0 "#PWR030" H 3250 5250 50  0001 C CNN
+F 1 "+3.3V" H 3265 5573 50  0000 C CNN
+F 2 "" H 3250 5400 50  0000 C CNN
+F 3 "" H 3250 5400 50  0000 C CNN
+	1    3250 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L VL53L0X U10
+U 1 1 5838B702
+P 2350 6400
+F 0 "U10" H 2350 7087 60  0000 C CNN
+F 1 "VL53L0X" H 2350 6981 60  0000 C CNN
+F 2 "VL53L0X:VL53L0X" H 2400 6350 60  0001 C CNN
+F 3 "" H 2400 6350 60  0000 C CNN
+	1    2350 6400
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2950 6600
+Wire Wire Line
+	1750 6100 1600 6100
+Wire Wire Line
+	1600 6100 1600 6000
+Wire Wire Line
+	950  6000 1750 6000
+Wire Wire Line
+	950  6000 950  6050
+Connection ~ 1600 6000
+Wire Wire Line
+	1300 6050 1300 6000
+Connection ~ 1300 6000
+Wire Wire Line
+	1750 6300 950  6300
+Wire Wire Line
+	950  6300 950  6250
+Wire Wire Line
+	1300 6250 1300 6450
+Connection ~ 1300 6300
+Wire Wire Line
+	2950 6100 3650 6100
+Wire Wire Line
+	2950 6000 3650 6000
+Wire Wire Line
+	2950 6300 6100 6300
+Wire Wire Line
+	6000 6400 2950 6400
+Wire Wire Line
+	3250 5400 3250 5500
+Wire Wire Line
+	3100 5500 3400 5500
+Wire Wire Line
+	3100 5500 3100 5550
+Wire Wire Line
+	3400 5500 3400 5550
+Connection ~ 3250 5500
+Wire Wire Line
+	3100 5850 3100 6000
+Connection ~ 3100 6000
+Wire Wire Line
+	3400 5850 3400 6100
+Connection ~ 3400 6100
+Wire Wire Line
+	1600 6300 1600 6700
+Wire Wire Line
+	1600 6400 1750 6400
+Connection ~ 1600 6300
+Wire Wire Line
+	1600 6500 1750 6500
+Connection ~ 1600 6400
+Wire Wire Line
+	1600 6600 1750 6600
+Connection ~ 1600 6500
+Wire Wire Line
+	1600 6700 1750 6700
+Connection ~ 1600 6600
+$Comp
+L VSS #PWR031
+U 1 1 5838B72A
+P 1300 6450
+F 0 "#PWR031" H 1300 6300 50  0001 C CNN
+F 1 "VSS" H 1318 6623 50  0000 C CNN
+F 2 "" H 1300 6450 50  0000 C CNN
+F 3 "" H 1300 6450 50  0000 C CNN
+	1    1300 6450
+	-1   0    0    1   
+$EndComp
+$Comp
+L C_Small C16
+U 1 1 5838C950
+P 950 3950
+F 0 "C16" H 1042 3996 50  0000 L CNN
+F 1 "100n" H 1042 3905 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 950 3950 50  0001 C CNN
+F 3 "" H 950 3950 50  0000 C CNN
+	1    950  3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C17
+U 1 1 5838C956
+P 1300 3950
+F 0 "C17" H 1392 3996 50  0000 L CNN
+F 1 "4.7u" H 1392 3905 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1300 3950 50  0001 C CNN
+F 3 "" H 1300 3950 50  0000 C CNN
+	1    1300 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R22
+U 1 1 5838C960
+P 3100 3500
+F 0 "R22" H 3170 3546 50  0000 L CNN
+F 1 "10k" H 3170 3455 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 3030 3500 50  0001 C CNN
+F 3 "" H 3100 3500 50  0000 C CNN
+	1    3100 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R23
+U 1 1 5838C966
+P 3400 3500
+F 0 "R23" H 3470 3546 50  0000 L CNN
+F 1 "10k" H 3470 3455 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 3330 3500 50  0001 C CNN
+F 3 "" H 3400 3500 50  0000 C CNN
+	1    3400 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR032
+U 1 1 5838C96C
+P 3250 3200
+F 0 "#PWR032" H 3250 3050 50  0001 C CNN
+F 1 "+3.3V" H 3265 3373 50  0000 C CNN
+F 2 "" H 3250 3200 50  0000 C CNN
+F 3 "" H 3250 3200 50  0000 C CNN
+	1    3250 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L VL53L0X U9
+U 1 1 5838C972
+P 2350 4200
+F 0 "U9" H 2350 4887 60  0000 C CNN
+F 1 "VL53L0X" H 2350 4781 60  0000 C CNN
+F 2 "VL53L0X:VL53L0X" H 2400 4150 60  0001 C CNN
+F 3 "" H 2400 4150 60  0000 C CNN
+	1    2350 4200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2950 4400
+Wire Wire Line
+	1750 3900 1600 3900
+Wire Wire Line
+	1600 3900 1600 3800
+Wire Wire Line
+	950  3800 1750 3800
+Wire Wire Line
+	950  3800 950  3850
+Connection ~ 1600 3800
+Wire Wire Line
+	1300 3850 1300 3800
+Connection ~ 1300 3800
+Wire Wire Line
+	1750 4100 950  4100
+Wire Wire Line
+	950  4100 950  4050
+Wire Wire Line
+	1300 4050 1300 4250
+Connection ~ 1300 4100
+Wire Wire Line
+	2950 3900 3650 3900
+Wire Wire Line
+	2950 3800 3650 3800
+Wire Wire Line
+	2950 4100 8300 4100
+Wire Wire Line
+	2950 4200 8300 4200
+Wire Wire Line
+	3250 3200 3250 3300
+Wire Wire Line
+	3100 3300 3400 3300
+Wire Wire Line
+	3100 3300 3100 3350
+Wire Wire Line
+	3400 3300 3400 3350
+Connection ~ 3250 3300
+Wire Wire Line
+	3100 3650 3100 3800
+Connection ~ 3100 3800
+Wire Wire Line
+	3400 3650 3400 3900
+Connection ~ 3400 3900
+Wire Wire Line
+	1600 4100 1600 4500
+Wire Wire Line
+	1600 4200 1750 4200
+Connection ~ 1600 4100
+Wire Wire Line
+	1600 4300 1750 4300
+Connection ~ 1600 4200
+Wire Wire Line
+	1600 4400 1750 4400
+Connection ~ 1600 4300
+Wire Wire Line
+	1600 4500 1750 4500
+Connection ~ 1600 4400
+$Comp
+L VSS #PWR033
+U 1 1 5838C99A
+P 1300 4250
+F 0 "#PWR033" H 1300 4100 50  0001 C CNN
+F 1 "VSS" H 1318 4423 50  0000 C CNN
+F 2 "" H 1300 4250 50  0000 C CNN
+F 3 "" H 1300 4250 50  0000 C CNN
+	1    1300 4250
+	-1   0    0    1   
+$EndComp
+Text HLabel 3650 1500 2    60   Input ~ 0
+VL53L0X_A_XSHUT
+Text HLabel 3650 1600 2    60   Output ~ 0
+VL53L0X_A_GPOI1
+Text HLabel 3650 3800 2    60   Input ~ 0
+VL53L0X_B_XSHUT
+Text HLabel 3650 6000 2    60   Input ~ 0
+VL53L0X_C_XSHUT
+Text HLabel 3650 3900 2    60   Output ~ 0
+VL53L0X_B_GPOI1
+Text HLabel 3650 6100 2    60   Output ~ 0
+VL53L0X_C_GPOI1
+Text HLabel 8300 4100 2    60   BiDi ~ 0
+I2C_SDA
+Text HLabel 8300 4200 2    60   Input ~ 0
+I2C_CLK
+Wire Wire Line
+	6100 6300 6100 1800
+Connection ~ 6100 4100
+Wire Wire Line
+	6000 1900 6000 6400
+Connection ~ 6000 4200
+$EndSCHEMATC

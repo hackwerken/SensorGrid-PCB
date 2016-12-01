@@ -1,0 +1,495 @@
+EESchema Schematic File Version 2
+LIBS:CRE1
+LIBS:sensorGridPcb-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:75176
+LIBS:stm32
+LIBS:VL53L0X
+LIBS:sensorGridPcb-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title "Ellie Proximity Sensor Grid-node"
+Date "2016-11-18"
+Rev "2"
+Comp "FHICT"
+Comment1 "Design by Martijn Stommels"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L STM32F103C8Tx U7
+U 1 1 582DAACC
+P 6000 3750
+F 0 "U7" H 4800 5500 50  0000 C CNN
+F 1 "STM32F103C8Tx" H 4800 5700 50  0000 C CNN
+F 2 "Housings_QFP:LQFP-48_7x7mm_Pitch0.5mm" H 4800 5600 50  0000 C CNN
+F 3 "" H 6000 3750 50  0000 C CNN
+	1    6000 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 1950 5800 1850
+Wire Wire Line
+	5800 1850 6100 1850
+Wire Wire Line
+	6100 1850 6100 1950
+Wire Wire Line
+	6000 1950 6000 1850
+Connection ~ 6000 1850
+Connection ~ 5900 1850
+$Comp
+L C C10
+U 1 1 582DAD06
+P 6750 1700
+F 0 "C10" V 6800 1750 50  0000 L CNN
+F 1 "100n" V 6700 1750 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6788 1550 50  0001 C CNN
+F 3 "" H 6750 1700 50  0000 C CNN
+	1    6750 1700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C13
+U 1 1 582DADA8
+P 6750 950
+F 0 "C13" V 6800 1000 50  0000 L CNN
+F 1 "100n" V 6700 1000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6788 800 50  0001 C CNN
+F 3 "" H 6750 950 50  0000 C CNN
+	1    6750 950 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C12
+U 1 1 582DAD74
+P 6750 1200
+F 0 "C12" V 6800 1250 50  0000 L CNN
+F 1 "100n" V 6700 1250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6788 1050 50  0001 C CNN
+F 3 "" H 6750 1200 50  0000 C CNN
+	1    6750 1200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C9
+U 1 1 582DB78F
+P 6750 1950
+F 0 "C9" V 6800 2050 50  0000 L CNN
+F 1 "1u" V 6700 2050 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6788 1800 50  0001 C CNN
+F 3 "" H 6750 1950 50  0000 C CNN
+	1    6750 1950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6250 1950 6600 1950
+Wire Wire Line
+	7000 1950 6900 1950
+$Comp
+L C C5
+U 1 1 582DBA7B
+P 2400 2050
+F 0 "C5" V 2148 2050 50  0000 C CNN
+F 1 "1u" V 2239 2050 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603" H 2438 1900 50  0001 C CNN
+F 3 "" H 2400 2050 50  0000 C CNN
+	1    2400 2050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2100 2050 2250 2050
+$Comp
+L CRYSTAL_Small Y1
+U 1 1 582DBD40
+P 1850 3400
+F 0 "Y1" V 1896 3312 50  0000 R CNN
+F 1 "CRYSTAL_8MHz" H 1650 3400 50  0000 R CNN
+F 2 "Crystals:HC-33UV" H 1850 3400 50  0001 C CNN
+F 3 "" H 1850 3400 50  0000 C CNN
+	1    1850 3400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R19
+U 1 1 582DBEA4
+P 2100 3500
+F 0 "R19" V 2000 3550 50  0000 C CNN
+F 1 "220" V 2100 3500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2030 3500 50  0001 C CNN
+F 3 "" H 2100 3500 50  0000 C CNN
+	1    2100 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L C C7
+U 1 1 582DC003
+P 1550 3300
+F 0 "C7" V 1802 3300 50  0000 C CNN
+F 1 "6.8p" V 1711 3300 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603" H 1588 3150 50  0001 C CNN
+F 3 "" H 1550 3300 50  0000 C CNN
+	1    1550 3300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C8
+U 1 1 582DC101
+P 1550 3500
+F 0 "C8" V 1400 3500 50  0000 C CNN
+F 1 "6.8p" V 1300 3500 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603" H 1588 3350 50  0001 C CNN
+F 3 "" H 1550 3500 50  0000 C CNN
+	1    1550 3500
+	0    -1   -1   0   
+$EndComp
+Connection ~ 1850 3300
+Connection ~ 1850 3500
+Wire Wire Line
+	1200 3600 1200 3300
+Wire Wire Line
+	1200 3300 1400 3300
+Wire Wire Line
+	1400 3500 1200 3500
+Connection ~ 1200 3500
+Wire Wire Line
+	2100 2050 2100 2250
+Wire Wire Line
+	2100 2250 2750 2250
+Wire Wire Line
+	1900 2200 1900 2150
+Wire Wire Line
+	1900 2150 2100 2150
+Connection ~ 2100 2150
+Wire Wire Line
+	2550 2050 2900 2050
+Wire Wire Line
+	2900 1850 2900 2350
+Wire Wire Line
+	2900 2350 3100 2350
+Wire Wire Line
+	2750 2250 2750 2550
+Wire Wire Line
+	2750 2550 3100 2550
+$Comp
+L C C6
+U 1 1 582EBEC0
+P 2200 2800
+F 0 "C6" V 1948 2800 50  0000 C CNN
+F 1 "100n" V 2039 2800 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603" H 2238 2650 50  0001 C CNN
+F 3 "" H 2200 2800 50  0000 C CNN
+	1    2200 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1900 2900 1900 2800
+Wire Wire Line
+	1900 2800 2050 2800
+Wire Wire Line
+	1700 3500 1950 3500
+Wire Wire Line
+	1700 3300 2550 3300
+Wire Wire Line
+	2550 3300 2550 2950
+Wire Wire Line
+	2550 2950 3100 2950
+Wire Wire Line
+	3100 3050 2650 3050
+Wire Wire Line
+	2650 3050 2650 3500
+Wire Wire Line
+	2650 3500 2250 3500
+$Comp
+L +3.3V #PWR034
+U 1 1 582EC6F5
+P 2500 2700
+F 0 "#PWR034" H 2500 2550 50  0001 C CNN
+F 1 "+3.3V" H 2515 2873 50  0000 C CNN
+F 2 "" H 2500 2700 50  0000 C CNN
+F 3 "" H 2500 2700 50  0000 C CNN
+	1    2500 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2700 2500 2800
+Wire Wire Line
+	2350 2800 2850 2800
+Wire Wire Line
+	2850 2800 2850 2750
+Wire Wire Line
+	2850 2750 3100 2750
+Connection ~ 2500 2800
+Text HLabel 2950 4250 0    60   Output ~ 0
+I2C_SCL
+Text HLabel 2950 4350 0    60   BiDi ~ 0
+I2C_SDA
+Wire Wire Line
+	2950 4250 3100 4250
+Wire Wire Line
+	2950 4350 3100 4350
+Text HLabel 9050 3950 2    60   Input ~ 0
+UART2_RX
+Text HLabel 9050 3850 2    60   Output ~ 0
+UART2_TX
+Wire Wire Line
+	8900 3850 9050 3850
+Wire Wire Line
+	8900 3950 9050 3950
+Text HLabel 9050 4450 2    60   Output ~ 0
+UART1_DE
+Text HLabel 9050 4550 2    60   Output ~ 0
+UART1_TX
+Text HLabel 9050 4650 2    60   Input ~ 0
+UART1_RX
+Wire Wire Line
+	9050 4550 8900 4550
+Wire Wire Line
+	8900 4650 9050 4650
+Wire Wire Line
+	8900 4450 9050 4450
+Text HLabel 2900 1850 1    60   Input ~ 0
+NRST
+Connection ~ 2900 2050
+Text HLabel 9050 4950 2    60   BiDi ~ 0
+SWD_IO
+Text HLabel 9050 5050 2    60   Input ~ 0
+SWD_CLK
+Wire Wire Line
+	8900 5050 9050 5050
+Wire Wire Line
+	9050 4950 8900 4950
+Text HLabel 9050 3750 2    60   Input ~ 0
+ADDRESS_IN_A
+Text HLabel 9050 3650 2    60   Output ~ 0
+ADDRESS_OUT_A
+Wire Wire Line
+	9050 3650 8900 3650
+Wire Wire Line
+	8900 3750 9050 3750
+Text HLabel 2900 4950 0    60   Output ~ 0
+LED_STATUS
+Text HLabel 2900 5050 0    60   Output ~ 0
+LED_RX
+Text HLabel 2900 5150 0    60   Output ~ 0
+LED_TX
+Wire Wire Line
+	2900 5050 3100 5050
+Wire Wire Line
+	3100 5150 2900 5150
+Wire Wire Line
+	2900 4950 3100 4950
+NoConn ~ 3100 3250
+NoConn ~ 3100 3350
+NoConn ~ 3100 3450
+NoConn ~ 3100 3850
+NoConn ~ 3100 4450
+NoConn ~ 3100 4550
+NoConn ~ 8900 4250
+NoConn ~ 8900 4350
+NoConn ~ 8900 4850
+NoConn ~ 8900 5150
+Text HLabel 2950 3750 0    60   Output ~ 0
+VL53L0X_A_XSHUT
+Text HLabel 2950 3650 0    60   Input ~ 0
+VL53L0X_A_GPIO1
+$Comp
+L VSS #PWR035
+U 1 1 583909E0
+P 1200 3600
+F 0 "#PWR035" H 1200 3450 50  0001 C CNN
+F 1 "VSS" H 1218 3773 50  0000 C CNN
+F 2 "" H 1200 3600 50  0000 C CNN
+F 3 "" H 1200 3600 50  0000 C CNN
+	1    1200 3600
+	-1   0    0    1   
+$EndComp
+$Comp
+L VSS #PWR036
+U 1 1 58390A9E
+P 1900 2200
+F 0 "#PWR036" H 1900 2050 50  0001 C CNN
+F 1 "VSS" H 1918 2373 50  0000 C CNN
+F 2 "" H 1900 2200 50  0000 C CNN
+F 3 "" H 1900 2200 50  0000 C CNN
+	1    1900 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L VSS #PWR037
+U 1 1 58390ACD
+P 1900 2900
+F 0 "#PWR037" H 1900 2750 50  0001 C CNN
+F 1 "VSS" H 1918 3073 50  0000 C CNN
+F 2 "" H 1900 2900 50  0000 C CNN
+F 3 "" H 1900 2900 50  0000 C CNN
+	1    1900 2900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2950 3650 3100 3650
+Wire Wire Line
+	3100 3750 2950 3750
+Text HLabel 2950 3950 0    60   Input ~ 0
+VL53L0X_B_GPIO1
+Text HLabel 2950 4050 0    60   Output ~ 0
+VL53L0X_B_XSHUT
+Wire Wire Line
+	2950 3950 3100 3950
+Wire Wire Line
+	2950 4050 3100 4050
+Text HLabel 2900 4650 0    60   Output ~ 0
+VL53L0X_C_XSHUT
+Wire Wire Line
+	2900 4650 3100 4650
+NoConn ~ 3100 4850
+Text HLabel 2950 4150 0    60   Input ~ 0
+VL53L0X_C_GPIO1
+Wire Wire Line
+	2950 4150 3100 4150
+Text HLabel 9050 4750 2    60   Output ~ 0
+TERM_ENALBE
+Wire Wire Line
+	8900 4750 9050 4750
+$Comp
+L VSS #PWR038
+U 1 1 583C1815
+P 5950 5750
+F 0 "#PWR038" H 5950 5600 50  0001 C CNN
+F 1 "VSS" H 5968 5923 50  0000 C CNN
+F 2 "" H 5950 5750 50  0000 C CNN
+F 3 "" H 5950 5750 50  0000 C CNN
+	1    5950 5750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5800 5550 5800 5700
+Wire Wire Line
+	5800 5700 6100 5700
+Wire Wire Line
+	6100 5700 6100 5550
+Connection ~ 5900 5700
+Wire Wire Line
+	6000 5550 6000 5700
+Connection ~ 6000 5700
+Wire Wire Line
+	5950 5700 5950 5750
+Connection ~ 5950 5700
+Wire Wire Line
+	5900 5700 5900 5550
+$Comp
+L C C11
+U 1 1 582DAD3A
+P 6750 1450
+F 0 "C11" V 6800 1500 50  0000 L CNN
+F 1 "100n" V 6700 1500 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6788 1300 50  0001 C CNN
+F 3 "" H 6750 1450 50  0000 C CNN
+	1    6750 1450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6900 950  7000 950 
+Connection ~ 7000 950 
+Wire Wire Line
+	6900 1200 7000 1200
+Connection ~ 7000 1200
+Connection ~ 7000 1450
+Wire Wire Line
+	6900 1700 7000 1700
+Connection ~ 7000 1700
+Wire Wire Line
+	5900 1950 5900 1850
+Wire Wire Line
+	5950 1850 5950 950 
+Wire Wire Line
+	5950 950  6600 950 
+Connection ~ 5950 1850
+Wire Wire Line
+	6600 1200 5950 1200
+Connection ~ 5950 1200
+Wire Wire Line
+	5700 1450 6600 1450
+Connection ~ 5950 1450
+Wire Wire Line
+	6250 1950 6250 1700
+Wire Wire Line
+	6250 1700 5950 1700
+Connection ~ 5950 1700
+Wire Wire Line
+	6600 1700 6400 1700
+Wire Wire Line
+	6400 1700 6400 1600
+Wire Wire Line
+	6400 1600 5950 1600
+Connection ~ 5950 1600
+Wire Wire Line
+	7000 950  7000 1950
+$Comp
+L +3.3V #PWR039
+U 1 1 583B354E
+P 5700 1200
+F 0 "#PWR039" H 5700 1050 50  0001 C CNN
+F 1 "+3.3V" H 5715 1373 50  0000 C CNN
+F 2 "" H 5700 1200 50  0000 C CNN
+F 3 "" H 5700 1200 50  0000 C CNN
+	1    5700 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L VSS #PWR040
+U 1 1 583B3A50
+P 7600 1600
+F 0 "#PWR040" H 7600 1450 50  0001 C CNN
+F 1 "VSS" H 7618 1773 50  0000 C CNN
+F 2 "" H 7600 1600 50  0000 C CNN
+F 3 "" H 7600 1600 50  0000 C CNN
+	1    7600 1600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7600 1600 7600 1450
+Wire Wire Line
+	7600 1450 6900 1450
+Wire Wire Line
+	5700 1200 5700 1450
+Text HLabel 9050 4150 2    60   Input ~ 0
+ADDRESS_IN_B
+Text HLabel 9050 4050 2    60   Output ~ 0
+ADDRESS_OUT_B
+Wire Wire Line
+	9050 4050 8900 4050
+Wire Wire Line
+	8900 4150 9050 4150
+$EndSCHEMATC
