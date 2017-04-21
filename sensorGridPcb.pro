@@ -1,4 +1,4 @@
-update=ma 28 nov 2016 14:39:43 CET
+update=ma 06 feb 2017 15:38:46 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,6 +25,16 @@ version=1
 NetIExt=net
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1
 [eeschema]
 version=1
 LibDir=simlib
@@ -63,13 +73,5 @@ LibName31=valves
 LibName32=simlib/75176
 LibName33=stm32
 LibName34=simlib/VL53L0X
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceAjustPassiveValues=0
-LabSize=60
-ERC_TestSimilarLabels=1
+LibName35=mechanical
+LibName36=switches

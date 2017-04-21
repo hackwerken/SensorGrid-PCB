@@ -1,4 +1,3 @@
 (fp_lib_table
-  (lib (name VL53L0X)(type KiCad)(uri "$(KIPRJMOD)/modlib/VL53L0X.pretty")(options "")(descr ""))
-  (lib (name CRE1S)(type KiCad)(uri "$(KIPRJMOD)/modlib/CRE1S.pretty")(options "")(descr ""))
+  (lib (name modlib)(type KiCad)(uri "$(KIPRJMOD)/modlib.pretty")(options "")(descr ""))
 )
